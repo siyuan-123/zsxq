@@ -20,7 +20,7 @@ class HTTPHeaderGenerator:
         for i in range(32):
             # 生成0-15的随机数，转换为十六进制字符
             result += format(random.randint(0, 15), 'x')
-            # 在特定位置插入连字符（对应js中的8,12,16,20，因为从0开始所以是7,11,15,19）
+            # 在特定位置插入连字符
             if i in [7, 11, 15, 19]:
                 result += "-"
         return result
